@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .container{
+      display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 400px;
+    }
+    input[type=text]{
+      width: 100%;
+    outline: none;
+    border: 1px solid #e2e2e2;
+    padding: 5px;
+    }
+    .card-head{
+      padding: 1.25rem;
+    }
+    .card-box{
+    display: block;
+    box-shadow: 2px 2px 20px #f9f9f9;
+    border: 1px solid #e1e1e1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card-box">
+      <form action="/" method="POST">
+        <input type="text" name="city" class="ghost-input" placeholder="Enter a city">
+      </form>
+      <div class="card">
+        <div class="card-head">
+          <div class="weather-title">
+            <h4>Simply Weather</h4>
+            <p>View the current weather for your city</p>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="result">
+            <% if(city !== null)  {%>
+              <h4 class="city">City:<%= city %></h4>
+            <% } %>
+            <% if(temp !== null)  {%>
+              <p class="temp">Temp: <%= temp %></p>
+            <% } %>
+            <% if(des !== null)  {%>
+              <p class="des">des: <%= des %></p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
